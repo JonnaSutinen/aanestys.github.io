@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Äänestyssovellus</title>
+</head>
+<body>
+    <header>
+        <h1>Äänestyssovellus</h1>
+    </header>
+
+    <section id="login-section">
+        <h2>Kirjaudu sisään</h2>
+        <label for="username">Käyttäjätunnus:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Salasana:</label>
+        <input type="password" id="password" name="password" required>
+        <button onclick="login()">Kirjaudu</button>
+        <p id="error-message" class="error-message"></p>
+        <p id="success-message" class="success-message"></p>
+    </section>
+
+    <section id="polls" class="hidden">
+        <!-- Tähän tulee lista muiden käyttäjien tekemiä äänestyksiä -->
+    </section>
+
+    <section id="admin-section" class="hidden">
+        <!-- Ylläpitäjän osio, jossa hän voi tehdä ja poistaa äänestyksiä -->
+        <button onclick="createPoll()">Luo uusi äänestys</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
